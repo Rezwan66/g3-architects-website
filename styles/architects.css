@@ -5,6 +5,8 @@
 
 * {
     font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .btn-primary {
@@ -63,15 +65,19 @@ nav li a {
 .banner-content {
     max-width: 800px;
     text-align: center;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 .banner-title {
     font-size: 4rem;
     font-weight: 700;
     color: #131313;
+    margin-bottom: 50px;
 }
 
+.banner-content .btn-primary {
+    margin-top: 50px;
+}
 
 .banner img {
     margin-top: 35px;
@@ -136,6 +142,11 @@ main {
     padding-left: 20px;
 }
 
+.feature-img img {
+    height: 70%;
+    margin-left: 70px;
+}
+
 .ten-years-badge {
     border-radius: 8px;
     background: #FF900E;
@@ -143,11 +154,19 @@ main {
     text-align: center;
     width: 300px;
     padding: 40px;
+    position: relative;
+    bottom: 100px;
 }
 
 .ten-years-badge h2 {
     font-size: 4rem;
     font-weight: 700;
+    margin: 0;
+}
+
+.ten-years-badge p {
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 
@@ -155,6 +174,8 @@ main {
 .facts-card-container {
     display: flex;
     justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .facts-card-container .card {
@@ -197,6 +218,24 @@ main {
     width: 165px;
 }
 
+/* footer section styles */
+
+footer {
+    max-width: 80%;
+    margin: 70px auto;
+    border-radius: 8px;
+    background: #FFF4E7;
+    padding: 40px;
+    
+}
+
+footer p {
+    color: #424242;
+    text-align: center;
+    font-size: 1.25rem;
+    
+}
+
 
 /* RESPONSIVE MEDIA QUERIES */
 
@@ -209,12 +248,23 @@ main {
     nav,
     .teams-container,
     .facts-card-container,
+    .features-container,
     .sponsors-img-container {
         flex-direction: column;
     }
 
     .teams-img-container {
         grid-template-columns: 1fr;
+    }
+
+    .feature-img img {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .ten-years-badge {
+        position: static;
+        max-width: 250px;
     }
 
     .teams-content,
@@ -236,7 +286,18 @@ main {
 
     nav,
     .teams-container,
+    .features-container,
     .sponsors-img-container {
         flex-direction: column;
+    }
+
+    .feature-img img {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .ten-years-badge {
+        position: static;
+        max-width: 250px;
     }
 }
